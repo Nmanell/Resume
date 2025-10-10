@@ -1,0 +1,78 @@
+.Top {
+    background-color: lightsalmon;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    background-position: center;
+}
+
+img {
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.Heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+}
+
+.Info {
+    display: flex;
+    height: 20px;
+}
+
+ul {
+    margin: auto;
+}
+
+.Summary {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+h2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+}
+
+p {
+    margin: auto;   
+}
+
+.Place {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.Points {
+    width: 75%;
+    text-align: left;
+    margin: auto;
+}
+
+h4 {
+    margin: auto;
+}
