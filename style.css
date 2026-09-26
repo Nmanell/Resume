@@ -1,78 +1,314 @@
-.Top {
-    background-color: lightsalmon;
-    padding-bottom: 10px;
-    border-radius: 25px;
-    background-position: center;
+:root {
+  --bg: #f6f5f0;
+  --ink: #1c1e1f;
+  --muted: #5c6266;
+  --accent: #2c4a52;
+  --accent-soft: #6a8a8f;
+  --line: #dcd9cf;
 }
 
-img {
-    width: 200px;
-    margin: auto;
-    margin-top: 20px;
+* {
+  box-sizing: border-box;
 }
 
-.Heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+html {
+  scroll-behavior: smooth;
 }
 
-h1 {
-    padding-left: 30px;
-    padding-right: 30px;
-    border-bottom: 2px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-style: solid;
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
-.Info {
-    display: flex;
-    height: 20px;
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4.5rem 1.75rem 6rem;
 }
 
-ul {
-    margin: auto;
+@media (max-width: 560px) {
+  main {
+    padding: 3rem 1.25rem 4rem;
+  }
 }
 
-.Summary {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+/* ---------- Header ---------- */
+
+header.masthead {
+  margin-bottom: 3.25rem;
 }
 
-h2 {
-    padding-left: 30px;
-    padding-right: 30px;
-    border-bottom: 2px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-color: black;
+.masthead-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
 }
 
-p {
-    margin: auto;   
+.portrait {
+  flex: none;
+  width: 108px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  filter: grayscale(0.15);
 }
 
-.Place {
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
+.masthead-text {
+  min-width: 0;
 }
 
-.Points {
-    width: 75%;
-    text-align: left;
-    margin: auto;
+@media (max-width: 560px) {
+  .masthead-row {
+    flex-direction: column-reverse;
+    gap: 1.1rem;
+  }
+
+  .portrait {
+    width: 84px;
+    height: 84px;
+  }
 }
 
-h4 {
-    margin: auto;
+.masthead h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+}
+
+.masthead .role {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin: 0 0 1.4rem;
+}
+
+.masthead hr {
+  border: none;
+  border-top: 2px solid var(--accent);
+  width: 3.25rem;
+  margin: 0 0 1.4rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.contact-row a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-row a:hover,
+.contact-row a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  margin-bottom: 2.75rem;
+}
+
+section > h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.summary p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--ink);
+}
+
+/* ---------- Entries (experience / projects) ---------- */
+
+.entry {
+  margin-bottom: 1.7rem;
+  position: relative;
+  padding-left: 1.15rem;
+  border-left: 2px solid var(--line);
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entry-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.entry-org {
+  font-size: 0.94rem;
+  color: var(--accent-soft);
+}
+
+.entry-org a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.entry-meta {
+  font-size: 0.86rem;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.entry ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.entry li {
+  margin-bottom: 0.4rem;
+  padding-left: 0.1rem;
+}
+
+.entry li:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Education ---------- */
+
+.edu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.edu-school {
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.edu-degree {
+  font-size: 0.94rem;
+  color: var(--accent-soft);
+}
+
+.edu-meta {
+  font-size: 0.86rem;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.edu-details {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.edu-details li {
+  margin-bottom: 0.4rem;
+}
+
+.coursework {
+  margin-top: 0.7rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.coursework span.label {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Skills ---------- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem 1rem;
+  font-size: 0.95rem;
+}
+
+.skills-grid dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.skills-grid dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Accessibility ---------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  body {
+    background: #fff;
+  }
+  main {
+    max-width: none;
+    padding: 0.25in 0.4in;
+  }
+  .entry,
+  section {
+    break-inside: avoid;
+  }
 }
