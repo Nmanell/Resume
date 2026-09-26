@@ -1,314 +1,150 @@
-:root {
-  --bg: #f6f5f0;
-  --ink: #1c1e1f;
-  --muted: #5c6266;
-  --accent: #2c4a52;
-  --accent-soft: #6a8a8f;
-  --line: #dcd9cf;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enmanuel Bueno — Resume</title>
+<meta name="description" content="Resume of Enmanuel Bueno, Software Engineering student and full-stack developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
 
-* {
-  box-sizing: border-box;
-}
+  <header class="masthead">
+    <div class="masthead-row">
+      <img class="portrait" src="Portrait.png" alt="Portrait of Enmanuel Bueno" width="128" height="128">
+      <div class="masthead-text">
+        <h1>Enmanuel Bueno</h1>
+        <p class="role">Software Engineering Student &amp; Full-Stack Developer</p>
+        <hr>
+        <div class="contact-row">
+          <span>Maywood, New Jersey</span>
+          <a href="mailto:enmanuel.bueno04@gmail.com">enmanuel.bueno04@gmail.com</a>
+          <a href="tel:+12016471828">(201) 647-1828</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-html {
-  scroll-behavior: smooth;
-}
+  <section class="summary">
+    <h2>Summary</h2>
+    <p>
+      Software Engineering student with experience across full-stack development, UI/UX design,
+      automated testing, cloud deployment, and Agile project management. Has led software projects,
+      mentored interns, and collaborated across frontend and backend teams to deliver scalable
+      applications. Proficient in Python, JavaScript, React, Flutter, AWS, and Docker.
+    </p>
+  </section>
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-}
+  <section class="education">
+    <h2>Education</h2>
+    <div class="edu-head">
+      <div>
+        <div class="edu-school">New Jersey Institute of Technology</div>
+        <div class="edu-degree">Bachelor of Science in Computer Science</div>
+      </div>
+      <div class="edu-meta">
+        Newark, NJ<br>
+        Expected Fall 2026 · GPA 3.549
+      </div>
+    </div>
+    <ul class="edu-details">
+      <li>Earned Dean's List honors for six consecutive semesters in recognition of outstanding academic achievement.</li>
+    </ul>
+    <p class="coursework">
+      <span class="label">Coursework:</span>
+      Operating Systems Design, Intensive Programming in Linux, Linear Algebra, Database System Design
+      and Management, Guided Design in Software Engineering, Artificial Intelligence, Programming
+      Interactive Computer Graphics
+    </p>
+  </section>
 
-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 4.5rem 1.75rem 6rem;
-}
+  <section class="experience">
+    <h2>Experience</h2>
 
-@media (max-width: 560px) {
-  main {
-    padding: 3rem 1.25rem 4rem;
-  }
-}
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title-group">
+          <span class="entry-title">Software Engineering Intern</span>
+          <span class="entry-org">Quantum Pulse Consulting</span>
+        </div>
+        <div class="entry-meta">Remote<br>January 2026 – August 2026</div>
+      </div>
+      <ul>
+        <li>Led two software projects with a team of six software engineering interns by overseeing project goals, setting deadlines, facilitating team workflow, reviewing git pull requests, and resolving merge conflicts.</li>
+        <li>Managed the deployment and infrastructure of two software projects on AWS, overseeing cloud environments, application releases, and production operations to ensure reliable and scalable delivery.</li>
+        <li>Mentored three software engineering interns by providing technical guidance, conducting code reviews, and supporting their development throughout the internship.</li>
+        <li>Improved user navigation efficiency by 62% through targeted UI/UX enhancements, streamlining workflows and creating a more intuitive user experience.</li>
+        <li>Supported strategic roadmap execution by contributing to Agile development processes, conducting technical research, delivering analytical solutions, and presenting project progress during demonstrations and reviews.</li>
+      </ul>
+    </div>
 
-/* ---------- Header ---------- */
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title-group">
+          <span class="entry-title">Graphic Designer and Videographer</span>
+          <span class="entry-org">Community Chest of Eastern Bergen County</span>
+        </div>
+        <div class="entry-meta">Englewood, NJ<br>October 2022 – September 2023</div>
+      </div>
+      <ul>
+        <li>Created a comprehensive design document for 90th anniversary materials, establishing visual guidelines, specifications, and branding standards to ensure consistency across event assets.</li>
+        <li>Managed and maintained a database of sponsors and donors using DonorPerfect, ensuring accurate records and up-to-date contact and contribution information.</li>
+      </ul>
+    </div>
+  </section>
 
-header.masthead {
-  margin-bottom: 3.25rem;
-}
+  <section class="projects">
+    <h2>Projects</h2>
 
-.masthead-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.75rem;
-}
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title-group">
+          <span class="entry-title">Health and Fitness Application — Frontend Developer</span>
+          <span class="entry-org"><a href="https://cs-490-group-frontend.vercel.app" target="_blank" rel="noopener">cs-490-group-frontend.vercel.app</a></span>
+        </div>
+        <div class="entry-meta">Guided Design in Software Engineering Course<br>January 2026 – April 2026</div>
+      </div>
+      <ul>
+        <li>Designed UI/UX specifications in Figma for 85% of site pages, translating application requirements into intuitive interfaces and development-ready design documentation.</li>
+        <li>Collaborated closely with backend developers to integrate APIs and ensure seamless communication between frontend interfaces and backend services.</li>
+        <li>Automated UI testing with Selenium to validate and improve 90% of application features, increasing test coverage and ensuring reliability across critical user workflows.</li>
+        <li>Developed and tested key frontend user and admin features, including onboarding surveys, coach applications and approvals, user management, payment methods, and workout log deletion.</li>
+      </ul>
+    </div>
 
-.portrait {
-  flex: none;
-  width: 108px;
-  height: 108px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid var(--line);
-  filter: grayscale(0.15);
-}
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title-group">
+          <span class="entry-title">Multi-media Linux Database Server</span>
+        </div>
+        <div class="entry-meta">May 2025 – August 2025</div>
+      </div>
+      <ul>
+        <li>Deployed and managed Docker containers for image backups using Immich and video hosting using Jellyfin, maintaining reliable and accessible self-hosted media services.</li>
+        <li>Set up and migrated databases and system environments across three Windows and Linux installations, ensuring proper configuration, data integrity, and system functionality.</li>
+        <li>Configured OpenVPN to provide secure remote access to local networks, strengthening network security and enabling reliable connectivity for five remote users.</li>
+      </ul>
+    </div>
+  </section>
 
-.masthead-text {
-  min-width: 0;
-}
+  <section class="skills">
+    <h2>Skills</h2>
+    <dl class="skills-grid">
+      <dt>Coding</dt>
+      <dd>Java, C++, C, Node, Python, Angular, React, HTML, CSS, Bash Scripting, WebGPU, Tailwind</dd>
+      <dt>Software</dt>
+      <dd>Linux, Unity, Git, MySQL, MongoDB, Cursor, DBeaver, Figma, Microsoft Office</dd>
+    </dl>
+  </section>
 
-@media (max-width: 560px) {
-  .masthead-row {
-    flex-direction: column-reverse;
-    gap: 1.1rem;
-  }
+  <footer>
+    Updated September 2026
+  </footer>
 
-  .portrait {
-    width: 84px;
-    height: 84px;
-  }
-}
-
-.masthead h1 {
-  font-family: "Fraunces", Georgia, serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-size: clamp(2.4rem, 6vw, 3.2rem);
-  letter-spacing: -0.01em;
-  margin: 0 0 0.35rem;
-  color: var(--ink);
-}
-
-.masthead .role {
-  font-family: "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.15rem;
-  color: var(--accent);
-  margin: 0 0 1.4rem;
-}
-
-.masthead hr {
-  border: none;
-  border-top: 2px solid var(--accent);
-  width: 3.25rem;
-  margin: 0 0 1.4rem;
-}
-
-.contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.1rem;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
-
-.contact-row a {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-}
-
-.contact-row a:hover,
-.contact-row a:focus-visible {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-/* ---------- Sections ---------- */
-
-section {
-  margin-bottom: 2.75rem;
-}
-
-section > h2 {
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  margin: 0 0 1.1rem;
-  padding-bottom: 0.55rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink);
-}
-
-.summary p {
-  margin: 0;
-  max-width: 62ch;
-  color: var(--ink);
-}
-
-/* ---------- Entries (experience / projects) ---------- */
-
-.entry {
-  margin-bottom: 1.7rem;
-  position: relative;
-  padding-left: 1.15rem;
-  border-left: 2px solid var(--line);
-}
-
-.entry:last-child {
-  margin-bottom: 0;
-}
-
-.entry-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.entry-title-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.entry-title {
-  font-weight: 600;
-  font-size: 1.02rem;
-  color: var(--ink);
-}
-
-.entry-org {
-  font-size: 0.94rem;
-  color: var(--accent-soft);
-}
-
-.entry-org a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-
-.entry-meta {
-  font-size: 0.86rem;
-  color: var(--muted);
-  text-align: right;
-  white-space: nowrap;
-}
-
-.entry ul {
-  margin: 0.65rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.entry li {
-  margin-bottom: 0.4rem;
-  padding-left: 0.1rem;
-}
-
-.entry li:last-child {
-  margin-bottom: 0;
-}
-
-/* ---------- Education ---------- */
-
-.edu-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.edu-school {
-  font-weight: 600;
-  font-size: 1.02rem;
-}
-
-.edu-degree {
-  font-size: 0.94rem;
-  color: var(--accent-soft);
-}
-
-.edu-meta {
-  font-size: 0.86rem;
-  color: var(--muted);
-  text-align: right;
-  white-space: nowrap;
-}
-
-.edu-details {
-  margin: 0.65rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.edu-details li {
-  margin-bottom: 0.4rem;
-}
-
-.coursework {
-  margin-top: 0.7rem;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
-
-.coursework span.label {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-/* ---------- Skills ---------- */
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.6rem 1rem;
-  font-size: 0.95rem;
-}
-
-.skills-grid dt {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.skills-grid dd {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* ---------- Footer ---------- */
-
-footer {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-/* ---------- Accessibility ---------- */
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* ---------- Print ---------- */
-
-@media print {
-  body {
-    background: #fff;
-  }
-  main {
-    max-width: none;
-    padding: 0.25in 0.4in;
-  }
-  .entry,
-  section {
-    break-inside: avoid;
-  }
-}
+</main>
+</body>
+</html>
